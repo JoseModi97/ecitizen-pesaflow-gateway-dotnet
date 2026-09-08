@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RollForward>LatestMajor</RollForward>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+
+    <!-- Global Tool Metadata -->
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>ecitizen-pesaflow</ToolCommandName>
+    <PackageId>dotnet-ecitizen-pesaflow</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Modi97, Jose Modi</Authors>
+    <Company>Modi97</Company>
+    <Description>CLI tool and project scaffolder for Kenya's eCitizen / PesaFlow PaymentAPI in .NET applications.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>ecitizen;pesaflow;cli;dotnet-tool;mpesa;kenya;payments</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ecitizen.PesaflowGateway\Ecitizen.PesaflowGateway.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

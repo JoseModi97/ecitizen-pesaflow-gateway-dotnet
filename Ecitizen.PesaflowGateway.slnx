@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/Ecitizen.PesaflowGateway.Sample.WebApi/Ecitizen.PesaflowGateway.Sample.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Ecitizen.PesaflowGateway.AspNetCore/Ecitizen.PesaflowGateway.AspNetCore.csproj" />
+    <Project Path="src/Ecitizen.PesaflowGateway.Cli/Ecitizen.PesaflowGateway.Cli.csproj" />
+    <Project Path="src/Ecitizen.PesaflowGateway/Ecitizen.PesaflowGateway.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Ecitizen.PesaflowGateway.Tests/Ecitizen.PesaflowGateway.Tests.csproj" />
+  </Folder>
+</Solution>
