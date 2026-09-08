@@ -246,23 +246,72 @@ PhoneHelper.IsValidStkPhone("0712345678");    // false (not yet normalized)
 
 ## CLI Global Tool (`ecitizen-pesaflow`)
 
-The .NET global tool mirrors the Node `npx ecitizen-pesaflow` CLI:
+The .NET global tool `dotnet-ecitizen-pesaflow` provides an interactive command-line interface mirroring `npx ecitizen-pesaflow`:
+
+### Installation
 
 ```bash
-# Interactive setup wizard (scaffolds appsettings and payment endpoints/controllers)
+dotnet tool install --global dotnet-ecitizen-pesaflow
+```
+
+> **Note**: Ensure your `PATH` contains your user's global tools directory (`%USERPROFILE%\.dotnet\tools` on Windows or `~/.dotnet/tools` on Linux/macOS). If installed via user SDK, also ensure `DOTNET_ROOT` is set.
+
+---
+
+### Commands & Capabilities
+
+#### 1. Interactive Project Setup Wizard (`init`)
+Run inside your project directory to scaffold credentials, settings, and controller/minimal API code:
+```bash
+# Interactive prompts
 ecitizen-pesaflow init
 
-# Run cryptographic parity check against known test vectors
+# Non-interactive with flags
+ecitizen-pesaflow init --client-id 33 --api-key YOUR_KEY --secret YOUR_SECRET --service-id 2798167 --currency KES --framework minimal -y
+```
+
+Available `init` options:
+- `--client-id <id>`: eCitizen API Client ID
+- `--api-key <key>`: eCitizen API Key
+- `--secret <secret>`: eCitizen Merchant Secret
+- `--service-id <id>`: eCitizen Service ID
+- `--url <url>`: Payment API endpoint (defaults to live eCitizen iframe URL)
+- `--currency <curr>`: Default currency code (default: `KES`)
+- `--framework <name>`: Target framework: `minimal` | `mvc` | `console`
+- `--yes, -y`: Skip interactive prompts and apply defaults/provided flags
+
+#### 2. Cryptographic Self-Test (`test`)
+Validates your environment against canonical test vectors to ensure 100% HMAC-SHA256 wire parity:
+```bash
 ecitizen-pesaflow test
+```
 
-# Prompt a payment directly from your terminal (M-Pesa STK push)
-ecitizen-pesaflow pay --amount 500 --description "Test" --name "Jane Doe" --id-number 12345678 --phone 0712345678
+#### 3. Direct Server-to-Server Payment Prompt (`pay`)
+Signs and submits a payment request directly to eCitizen:
+```bash
+ecitizen-pesaflow pay \
+  --amount 500 \
+  --description "Test Service Fee" \
+  --name "Jane Doe" \
+  --id-number "12345678" \
+  --phone "0712345678"
+```
+*(Add `--dry-run` to print the calculated payload and `secureHash` without sending to eCitizen).*
 
-# Open the real eCitizen payment page in your browser and watch for settlement
-ecitizen-pesaflow checkout --amount 500 --description "Test" --name "Jane Doe" --id-number 12345678
+#### 4. Browser Checkout with Settlement Watcher (`checkout`)
+Builds a signed payment link, automatically opens it in your default browser, and continuously polls for settlement status:
+```bash
+ecitizen-pesaflow checkout \
+  --amount 500 \
+  --description "Trading License" \
+  --name "John Doe" \
+  --id-number "12345678"
+```
 
-# Check settlement status of an invoice reference
-ecitizen-pesaflow status --reference INV-0001
+#### 5. Settlement Status Query (`status`)
+Check payment confirmation status of an existing invoice reference:
+```bash
+ecitizen-pesaflow status --reference INV-1002
 ```
 
 ---
