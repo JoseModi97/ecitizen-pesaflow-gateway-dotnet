@@ -9,7 +9,7 @@
     
     <!-- Package Metadata adhering to Microsoft Package Authoring Best Practices -->
     <PackageId>Ecitizen.PesaflowGateway</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Modi97, Jose Modi</Authors>
     <Company>Modi97</Company>
     <Copyright>Copyright (c) 2026 Jose Modi</Copyright>
@@ -19,7 +19,7 @@
     <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>ecitizen;pesaflow;mpesa;kenya;payments;paymentapi;stkpush;checkout;ipn;webhook</PackageTags>
-    <PackageReleaseNotes>Initial 1.0.0 release of Ecitizen.PesaflowGateway for .NET. Multi-targeted for netstandard2.0, net8.0, and net10.0 with 100% cryptographic wire parity to eCitizen PaymentAPI.</PackageReleaseNotes>
+    <PackageReleaseNotes>1.0.1: Documentation updates, added multi-platform examples repository index, and verified .NET 8/10 compatibility.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
 
