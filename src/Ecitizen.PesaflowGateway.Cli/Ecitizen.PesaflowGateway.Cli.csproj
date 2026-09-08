@@ -9,20 +9,23 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <NoWarn>$(NoWarn);1591</NoWarn>
 
-    <!-- Global Tool Metadata -->
+    <!-- Global Tool Metadata adhering to Microsoft Package Authoring Best Practices -->
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>ecitizen-pesaflow</ToolCommandName>
     <PackageId>dotnet-ecitizen-pesaflow</PackageId>
     <Version>1.0.0</Version>
     <Authors>Modi97, Jose Modi</Authors>
     <Company>Modi97</Company>
+    <Copyright>Copyright (c) 2026 Jose Modi</Copyright>
     <Description>CLI tool and project scaffolder for Kenya's eCitizen / PesaFlow PaymentAPI in .NET applications.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</PackageProjectUrl>
     <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>ecitizen;pesaflow;cli;dotnet-tool;mpesa;kenya;payments</PackageTags>
+    <PackageReleaseNotes>Initial 1.0.0 release of dotnet-ecitizen-pesaflow global tool.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,6 +35,7 @@
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
