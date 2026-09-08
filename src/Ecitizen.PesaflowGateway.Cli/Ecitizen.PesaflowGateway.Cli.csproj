@@ -13,7 +13,7 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>ecitizen-pesaflow</ToolCommandName>
     <PackageId>dotnet-ecitizen-pesaflow</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Modi97, Jose Modi</Authors>
     <Company>Modi97</Company>
     <Copyright>Copyright (c) 2026 Jose Modi</Copyright>
@@ -23,7 +23,7 @@
     <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>ecitizen;pesaflow;cli;dotnet-tool;mpesa;kenya;payments</PackageTags>
-    <PackageReleaseNotes>Initial 1.0.0 release of dotnet-ecitizen-pesaflow global tool.</PackageReleaseNotes>
+    <PackageReleaseNotes>1.0.1: Automatically auto-discover and load credentials from local appsettings.json or appsettings.Development.json during pay, checkout, and status commands.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>

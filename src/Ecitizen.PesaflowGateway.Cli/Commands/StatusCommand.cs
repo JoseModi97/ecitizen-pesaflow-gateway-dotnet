@@ -21,11 +21,10 @@ public static class StatusCommand
             return;
         }
 
+        var config = CliConfigLoader.LoadConfig();
         var statusUrl = flags.GetValueOrDefault("status-url") ?? Environment.GetEnvironmentVariable("ECITIZEN_STATUS_URL");
-        var client = new EcitizenClient(new EcitizenConfig
-        {
-            StatusUrl = statusUrl
-        });
+        if (!string.IsNullOrWhiteSpace(statusUrl)) config.StatusUrl = statusUrl;
+        var client = new EcitizenClient(config);
 
         try
         {

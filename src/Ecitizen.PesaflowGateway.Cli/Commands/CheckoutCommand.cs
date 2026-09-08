@@ -20,7 +20,8 @@ public static class CheckoutCommand
         Console.WriteLine("\x1b[1mOpening the eCitizen payment page in your browser\x1b[0m\n");
 
         var flags = ParseFlags(args);
-        var client = new EcitizenClient();
+        var config = CliConfigLoader.LoadConfig();
+        var client = new EcitizenClient(config);
 
         var amountStr = flags.GetValueOrDefault("amount");
         if (string.IsNullOrWhiteSpace(amountStr))

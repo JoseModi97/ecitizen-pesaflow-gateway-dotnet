@@ -16,7 +16,8 @@ public static class PayCommand
         var autoYes = flags.ContainsKey("yes") || flags.ContainsKey("y");
         var dryRun = flags.ContainsKey("dry-run");
 
-        var client = new EcitizenClient();
+        var config = CliConfigLoader.LoadConfig();
+        var client = new EcitizenClient(config);
 
         var amountStr = flags.GetValueOrDefault("amount");
         if (string.IsNullOrWhiteSpace(amountStr))
