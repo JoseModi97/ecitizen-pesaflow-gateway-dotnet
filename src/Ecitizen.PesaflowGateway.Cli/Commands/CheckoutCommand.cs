@@ -74,7 +74,7 @@ public static class CheckoutCommand
             Currency = flags.GetValueOrDefault("currency"),
             CallbackUrl = flags.GetValueOrDefault("callback-url"),
             NotifyUrl = flags.GetValueOrDefault("notify-url"),
-            SendStkPush = !flags.ContainsKey("no-send-stk"),
+            SendStkPush = flags.ContainsKey("send-stk"),
         };
 
         var formHtml = client.PayButton(payment, "Continue to Payment", new PayButtonOptions { Target = "_self" });
