@@ -19,8 +19,8 @@
     <Copyright>Copyright (c) 2026 Jose Modi</Copyright>
     <Description>CLI tool and project scaffolder for Kenya's eCitizen / PesaFlow PaymentAPI in .NET applications.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>ecitizen;pesaflow;cli;dotnet-tool;mpesa;kenya;payments</PackageTags>
     <PackageReleaseNotes>Initial 1.0.0 release of dotnet-ecitizen-pesaflow global tool.</PackageReleaseNotes>

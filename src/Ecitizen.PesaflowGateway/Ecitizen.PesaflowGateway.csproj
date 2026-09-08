@@ -15,8 +15,8 @@
     <Copyright>Copyright (c) 2026 Jose Modi</Copyright>
     <Description>Idiomatic .NET client for Kenya's eCitizen and PesaFlow PaymentAPI (M-Pesa STK push, checkout forms, IPN webhook signature verification). Minimal-dependency core with exact HMAC-SHA256 wire parity.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>ecitizen;pesaflow;mpesa;kenya;payments;paymentapi;stkpush;checkout;ipn;webhook</PackageTags>
     <PackageReleaseNotes>Initial 1.0.0 release of Ecitizen.PesaflowGateway for .NET. Multi-targeted for netstandard2.0, net8.0, and net10.0 with 100% cryptographic wire parity to eCitizen PaymentAPI.</PackageReleaseNotes>

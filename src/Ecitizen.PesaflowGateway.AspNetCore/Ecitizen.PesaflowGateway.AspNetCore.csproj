@@ -15,8 +15,8 @@
     <Copyright>Copyright (c) 2026 Jose Modi</Copyright>
     <Description>ASP.NET Core integration for Kenya's eCitizen / PesaFlow PaymentAPI. Provides dependency injection extensions, Minimal API webhook endpoint mapping (MapEcitizenWebhook), and MVC webhook processing.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JoseModi97/ecitizen-pesaflow-gateway-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>ecitizen;pesaflow;aspnetcore;minimalapi;mpesa;kenya;payments;webhook</PackageTags>
     <PackageReleaseNotes>Initial 1.0.0 release of Ecitizen.PesaflowGateway.AspNetCore for .NET 8 and .NET 10.</PackageReleaseNotes>
