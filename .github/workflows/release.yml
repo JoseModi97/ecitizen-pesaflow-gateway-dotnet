@@ -17,6 +17,9 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
     - uses: actions/checkout@v4
@@ -44,11 +47,16 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: nuget-packages
-        path: ./artifacts/*.nupkg
+        path: ./artifacts/*.*nupkg
+
+    - name: NuGet Login
+      id: login
+      if: startsWith(github.ref, 'refs/tags/v') || github.event.inputs.publish == 'true'
+      uses: NuGet/login@v1
+      with:
+        user: Modi97
 
     - name: Publish to NuGet.org
-      if: (startsWith(github.ref, 'refs/tags/v') || github.event.inputs.publish == 'true') && env.NUGET_API_KEY != ''
-      env:
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      if: startsWith(github.ref, 'refs/tags/v') || github.event.inputs.publish == 'true'
       run: |
-        dotnet nuget push "./artifacts/*.nupkg" --api-key "$NUGET_API_KEY" --source "https://api.nuget.org/v3/index.json" --skip-duplicate
+        dotnet nuget push "./artifacts/*.nupkg" --api-key "${{ steps.login.outputs.NUGET_API_KEY || secrets.NUGET_API_KEY }}" --source "https://api.nuget.org/v3/index.json" --skip-duplicate
